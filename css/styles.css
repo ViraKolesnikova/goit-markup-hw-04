@@ -8,6 +8,7 @@
 /*цвет части логотипа #000000*/
 /*цвет телефона и мейла в футере rgba(255, 255, 255, 0,6)*/
 /*цвет рамки в хедере #ECECEC*/
+/*цвет ссылок на соцсети #AFB1B8*/
 :root {
   --primery-text-color: #757575;
   --title-color: #212121;
@@ -20,6 +21,7 @@
   --phone-mail-in-footer: rgba(255, 255, 255, 0.6);
   --header-border: #ECECEC;
   --cards-border: #EEEEEE;
+  --social-links-color: #AFB1B8;
 }
 
 body {
@@ -112,10 +114,15 @@ header {
   color: var(--accent);
 }
 
-.nav-link,
-.contact-link {
+.nav-link {
   display: block;
   padding: 32px 0;
+}
+
+.contact-link {
+  display: flex;
+  padding: 32px 0;
+  align-items: center;
 }
 
 .contact-list {
@@ -133,7 +140,12 @@ header {
 .contact-link:focus {
   color: var(--accent);
 }
-
+ 
+.icon-envelope,
+.icon-phone {
+  margin-right: 10px;
+  fill: currentColor;
+}
 
 /*Секция для заказа услуг*/
 .hero-section {
@@ -194,6 +206,9 @@ header {
 }
 
 /*Особенности оказания услуг*/
+.features-padding {
+  padding-top: 91px;
+}
 .features {
   margin-top: -40px;
 }
@@ -205,6 +220,7 @@ header {
 }
 
 .features-title {
+  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--title-color);
@@ -234,6 +250,19 @@ header {
   visibility: hidden;
 }
 
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-background {
+  padding: 25px 100px;
+  background-color: var(--secondary-background-color);
+}
+
 /*Секция чем мы занимаемся*/
 .images {
   justify-content: space-between;
@@ -251,7 +280,7 @@ header {
 
 .employee-card-caption {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   text-align: center;
 }
 
@@ -271,6 +300,35 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+}
+
+.employee-social-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+  color: var(--social-links-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: var(--white-color);
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.social-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 footer {
