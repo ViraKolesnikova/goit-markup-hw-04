@@ -75,7 +75,8 @@ header {
 .images,
 .cards,
 .filtr-button-list,
-.gallery-list {
+.gallery-list,
+.footer {
   display: flex;
   align-items: center;
 }
@@ -331,12 +332,59 @@ header {
   margin-right: 10px;
 }
 
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client-link {
+  display: block;
+ 
+  color: var(--social-links-color);
+  border: 1px solid var(--social-links-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.client-link-item {
+   margin-right: 30px;
+}
+.client-link-item:last-child {
+  margin-right: 0;
+}
+
+.client1 {
+  padding: 23px 63px 22px 64px;
+}
+.client2 {
+  padding: 19px 65px 21px;
+}
+.client3 {
+  padding: 25px 62px 26px;
+}
+.client4 {
+  padding: 25px 43px 27px;
+}
+.client5 {
+  padding: 23px 53px 24px;
+}
+.client6 {
+  padding: 23px 38px 25px;
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
 footer {
   background-color: var(--hero-footer-background);
 }
 
 footer>.container {
-  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
   margin-right: auto;
