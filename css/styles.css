@@ -22,6 +22,7 @@
   --header-border: #ECECEC;
   --cards-border: #EEEEEE;
   --social-links-color: #AFB1B8;
+  --footer-social-links-back: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -291,7 +292,9 @@ header {
   background-color: var(--white-color);
   font-size: 16px;
   line-height: 1.18;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);  
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -328,7 +331,7 @@ header {
   border-radius: 50%;
 }
 
-.social-link:not(:last-child) {
+.social-link-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -351,7 +354,7 @@ header {
 }
 
 .client-link-item {
-   margin-right: 30px;
+  margin-right: 30px;
 }
 .client-link-item:last-child {
   margin-right: 0;
@@ -390,6 +393,10 @@ footer>.container {
   margin-right: auto;
 }
 
+.footer {
+  align-items: flex-start;
+}
+
 .logo-footer {
   margin-right: 0;
   color: var(--white-color);
@@ -407,12 +414,47 @@ footer>.container {
   margin-top: 9px;
 }
 
+.logo-address-block{
+  margin-right: 70px;
+}
 .footer-contacts {
   color: var(--phone-mail-in-footer);
 }
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent);
+}
+
+.invitation {
+margin-top: 12px;
+margin-bottom: 20px;
+color: var(--white-color);
+font-weight: bold;
+font-size: 14px;
+line-height: 1.14px;
+text-transform: uppercase;
+}
+
+.footer-social-links {
+  display: flex;
+}
+
+.footer-social-link {
+  display: block;
+  padding: 12px;
+  color: var(--white-color);
+  background-color: var(--footer-social-links-back);
+  border-radius: 50%;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.footer-social-link-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 /*==============Портфолио================*/
@@ -440,6 +482,9 @@ footer>.container {
 .filtr-button:focus {
   color: var(--white-color);
   background-color: var(--accent);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+  0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+  0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .filtr-button-item:not(:last-child) {
@@ -484,4 +529,11 @@ footer>.container {
   border-bottom: 1px solid;
   border-left: 1px solid;
   border-color: var(--cards-border);
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+  0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
