@@ -152,8 +152,6 @@ header {
 /*Секция для заказа услуг*/
 .hero-section {
   text-align: center;
-
-  background-color: var(--hero-footer-background);
 }
 
 .main-title {
@@ -200,6 +198,7 @@ header {
   margin-right: auto;
   max-width: 1600px;
   height: 600px;
+  background-color: var(--hero-footer-background);
   background-image: linear-gradient(to right, 
     rgba(47, 48, 58, 0.4), 
     rgba(47, 48, 58, 0.4)), 
@@ -261,7 +260,10 @@ header {
 }
 
 .icon-background {
-  padding: 25px 100px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--secondary-background-color);
 }
 
@@ -282,7 +284,7 @@ header {
 
 .employee-card-caption {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -306,10 +308,13 @@ header {
   line-height: 1.18;
 }
 
+.employee-text {
+  margin-bottom: 16px;
+}
+
 .employee-social-links {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
 }
 
 .social-icon {
@@ -319,8 +324,12 @@ header {
 }
 
 .social-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  
   color: var(--social-links-color);
 }
 
@@ -341,7 +350,11 @@ header {
 }
 
 .client-link {
-  display: block;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
  
   color: var(--social-links-color);
   border: 1px solid var(--social-links-color);
@@ -353,30 +366,8 @@ header {
   border: 1px solid var(--accent);
 }
 
-.client-link-item {
+.client-link-item:not(:last-child) {
   margin-right: 30px;
-}
-.client-link-item:last-child {
-  margin-right: 0;
-}
-
-.client1 {
-  padding: 23px 63px 22px 64px;
-}
-.client2 {
-  padding: 19px 65px 21px;
-}
-.client3 {
-  padding: 25px 62px 26px;
-}
-.client4 {
-  padding: 25px 43px 27px;
-}
-.client5 {
-  padding: 23px 53px 24px;
-}
-.client6 {
-  padding: 23px 38px 25px;
 }
 
 .client-icon {
@@ -394,7 +385,7 @@ footer>.container {
 }
 
 .footer {
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -426,12 +417,11 @@ footer>.container {
 }
 
 .invitation {
-margin-top: 12px;
 margin-bottom: 20px;
 color: var(--white-color);
 font-weight: bold;
 font-size: 14px;
-line-height: 1.14px;
+line-height: 1.14;
 text-transform: uppercase;
 }
 
@@ -440,8 +430,11 @@ text-transform: uppercase;
 }
 
 .footer-social-link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
   color: var(--white-color);
   background-color: var(--footer-social-links-back);
   border-radius: 50%;
